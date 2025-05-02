@@ -12,7 +12,7 @@ class DeliveryButton extends StatelessWidget {
     this.onPressed,
     required this.label,
     this.backgroundColor,
-    this.height,
+    this.height = 50,
     this.width,
   });
 

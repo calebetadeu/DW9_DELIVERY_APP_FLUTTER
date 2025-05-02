@@ -18,14 +18,14 @@ class ThemeConfig {
       centerTitle: true,
       iconTheme: IconThemeData(color: Colors.black),
     ),
-    primaryColor: ColorsApp.instance.primary,
+    primaryColor: ColorsApp.i.primary,
     colorScheme: ColorScheme.fromSeed(
-      seedColor: ColorsApp.instance.primary,
-      primary: ColorsApp.instance.primary,
-      secondary: ColorsApp.instance.secondary,
+      seedColor: ColorsApp.i.primary,
+      primary: ColorsApp.i.primary,
+      secondary: ColorsApp.i.secondary,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
-      style: AppStyles.instance.primaryButton,
+      style: AppStyle.i.primaryButton,
     ),
     inputDecorationTheme: InputDecorationTheme(
       fillColor: Colors.white,
@@ -34,10 +34,10 @@ class ThemeConfig {
       contentPadding: EdgeInsets.all(13),
       border: _defaultInputBorder,
       focusedBorder: _defaultInputBorder,
-      labelStyle: TextStyles.instance.textRegular.copyWith(
+      labelStyle: TextStyles.i.textRegular.copyWith(
         color: Colors.black
       ),
-      errorStyle: TextStyles.instance.textRegular.copyWith(
+      errorStyle: TextStyles.i.textRegular.copyWith(
         color: Colors.red
       ),
     ),

@@ -1,17 +1,26 @@
-import 'package:dw9_delivery_app/app/core/ui/styles/colors_app.dart';
-import 'package:dw9_delivery_app/app/core/ui/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
-class AppStyles {
-  static AppStyles? _instance;
-  // Avoid self instance
-  AppStyles._();
-  static AppStyles get instance => _instance ??= AppStyles._();
+import 'colors_app.dart';
+import 'text_styles.dart';
+
+class AppStyle {
+  static AppStyle? _instance;
+
+  AppStyle._();
+  static AppStyle get i {
+    _instance ??= AppStyle._();
+    return _instance!;
+  }
 
   ButtonStyle get primaryButton => ElevatedButton.styleFrom(
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(7)),
-    backgroundColor: ColorsApp.instance.primary,
-    foregroundColor: Colors.white,
-    textStyle: TextStyles.instance.textButtonLabel,
-  );
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(7),
+        ),
+        backgroundColor: ColorsApp.i.primary,
+        textStyle: TextStyles.i.textButtonLevel,
+      );
+}
+
+extension AppStylesExtensions on BuildContext {
+  AppStyle get appStyle => AppStyle.i;
 }
